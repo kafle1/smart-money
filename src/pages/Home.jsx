@@ -1,10 +1,9 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { signInWithGoogle } from "../firebase-config";
 import UserContext from "../context/UserContext";
 
 const Home = () => {
   const { user, setUser } = useContext(UserContext);
-  console.log('user: ', user);
 
   const handleLogin = async () => {
     const loggedInUser = await signInWithGoogle();

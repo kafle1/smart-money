@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { logout } from '../firebase-config';
 import UserContext from '../context/UserContext';
 

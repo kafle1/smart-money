@@ -4,6 +4,8 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   signOut,
+  setPersistence,
+  browserLocalPersistence,
 } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
@@ -23,7 +25,7 @@ const db = getFirestore(app);
 
 // Set up a persistent authentication listener
 const setAuthPersistence = async () => {
-  await auth.setPersistence(auth.Auth.Persistence.LOCAL);
+  await setPersistence(auth, browserLocalPersistence);
 };
 
 const onAuthStateChanged = (callback) => {
