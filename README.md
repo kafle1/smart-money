@@ -4,7 +4,7 @@ Early-stage personal finance web app exploring financial literacy tooling with F
 
 ## Status
 
-This project is in early development. The app's entry point (`src/App.jsx`) is currently still the default Vite + React starter. A landing page, login, and dashboard flow (`src/pages/`) built around Firebase Google Sign-In (`src/firebase-config.js`) exist in the source but are not yet wired into the running app - `firebase` and `react-router-dom` are used by these pages but are not yet listed in `package.json`.
+This project is in early development. The app's entry point (`src/App.jsx`) now routes between the landing page, login, and dashboard flow (`src/pages/`) using `react-router-dom`, with sign-in state shared through `UserContext` and Firebase Google Sign-In (`src/firebase-config.js`). Firestore is initialized but not yet used for data storage.
 
 ## Explored Features
 
@@ -14,9 +14,9 @@ This project is in early development. The app's entry point (`src/App.jsx`) is c
 
 ## Tech Stack
 
-- React 18, Vite
-- Firebase (Authentication, Firestore) - integration in progress
-- Tailwind CSS (configured via `tailwind.config.js`, not yet wired into the build)
+- React 18, Vite, React Router
+- Firebase (Authentication, Firestore)
+- Tailwind CSS
 
 ## Getting Started
 
@@ -24,6 +24,12 @@ This project is in early development. The app's entry point (`src/App.jsx`) is c
 npm install
 npm run dev
 ```
+
+## Screenshot
+
+![Landing page](docs/screenshot.png)
+
+The landing page as rendered by the dev server, showing the "Financial Literacy" navbar, hero section, and Google sign-in entry point.
 
 ## License
 
